@@ -42,7 +42,10 @@
 <body class="bg-gray-900 text-white flex flex-col items-center justify-between min-h-screen p-2 sm:p-4">
 
     <!-- Header -->
-    <header class="w-full max-w-md text-center py-4">
+    <header class="w-full max-w-md text-center py-4 relative">
+        <a href="about.html" id="about-btn" class="absolute left-2 top-1/2 -translate-y-1/2 text-sm bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+            About
+        </a>
         <h1 class="text-3xl sm:text-4xl font-bold tracking-wider uppercase">Tradle</h1>
         <p class="text-gray-400">Translate the Spanish word</p>
         <!-- Stats Counter -->
@@ -174,15 +177,12 @@
                 for (let r = 0; r < MAX_TRIES; r++) {
                     for (let c = 0; c < currentEnglishWord.length; c++) {
                         const tile = document.createElement('div');
-                        // The tile is now just a container for the front/back faces
                         tile.classList.add('tile', 'w-14', 'h-14', 'sm:w-16', 'sm:h-16', 'border-2', 'border-gray-600');
                         
                         const front = document.createElement('div');
-                        // Front face fills the tile and centers the letter
                         front.classList.add('front', 'absolute', 'w-full', 'h-full', 'flex', 'items-center', 'justify-center', 'text-2xl', 'font-bold', 'uppercase');
                         
                         const back = document.createElement('div');
-                        // Back face also fills the tile and centers the letter
                         back.classList.add('back', 'absolute', 'w-full', 'h-full', 'flex', 'items-center', 'justify-center', 'text-2xl', 'font-bold', 'uppercase');
 
                         tile.appendChild(front);
@@ -372,10 +372,7 @@
             
             function updateTileAndKey(tile, letter, bgColor, borderColor) {
                 const back = tile.querySelector('.back');
-                // The back face gets the background color, and since it fills the tile, the whole square is colored.
                 back.classList.add(bgColor);
-
-                // The main tile element's border is updated to match.
                 tile.classList.remove('border-gray-600', 'border-gray-400');
                 tile.classList.add(borderColor);
                 
@@ -385,7 +382,6 @@
                     const isYellow = key.classList.contains('bg-yellow-500');
                     const isNewColorGray = bgColor === 'bg-gray-700';
 
-                    // Only upgrade colors: gray -> yellow -> green. Don't downgrade.
                     if (isGreen) {
                         // Do nothing if already green
                     } else if (isYellow && isNewColorGray) {
