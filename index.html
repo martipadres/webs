@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project Portfolio</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-12 md:py-20">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">My Websites & Projects</h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">A central hub for all of my web development projects. Click on any project to see it live.</p>
+        </header>
+
+        <!-- Grid for Project Cards -->
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- 
+              PROJECT CARD TEMPLATE 
+              Copy and paste this entire 'div' block to add a new project.
+              - Update the href="#" to the relative path of your project's folder (e.g., "./project-one/index.html").
+              - Change the title and description.
+            -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2 text-gray-900">Apren Francès</h2>
+                    <p class="text-gray-700 mb-4">A brief and catchy description of what this project is about. Explain its purpose and the technologies used.</p>
+                    <!-- Make sure this link points to the correct folder/file -->
+                    <a href="./apren_frances/index.html" class="inline-block bg-indigo-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+                        View Project
+                    </a>
+                </div>
+            </div>
+            <!-- End of Project Card -->
+
+            <!-- Project Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2 text-gray-900">Tradle</h2>
+                    <p class="text-gray-700 mb-4">This project showcases an interactive data visualization dashboard built with D3.js and React.</p>
+                    <!-- Make sure this link points to the correct folder/file -->
+                    <a href="./tradle/index.html" class="inline-block bg-indigo-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+                        View Project
+                    </a>
+                </div>
+            </div>
+            <!-- End of Project Card -->
+            
+            <!-- Add more project cards here by copying the template above -->
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 text-gray-500">
+            <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
